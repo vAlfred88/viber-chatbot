@@ -4,7 +4,7 @@ const ViberBot = require('viber-bot').Bot;
 const Event = require('viber-bot').Events;
 
 const bot = new ViberBot({
-    authToken: '4d91d8c35f27d38e-5f15b9477677bedf-da567036ce61643d',
+    authToken: process.env.AUTH_TOKEN,
 })
 
 bot.on(Event.MESSAGE_RECEIVED, (message, response) => {
