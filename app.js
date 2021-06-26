@@ -5,6 +5,8 @@ const Event = require('viber-bot').Events;
 
 const bot = new ViberBot({
     authToken: process.env.AUTH_TOKEN,
+    name: 'EventBot',
+    avatar: ''
 })
 
 bot.on(Event.MESSAGE_RECEIVED, (message, response) => {
@@ -12,7 +14,7 @@ bot.on(Event.MESSAGE_RECEIVED, (message, response) => {
 });
 
 const https = require('https');
-// const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
 
 // const webhookUrl = process.env.WEBHOOK_URL;
 
