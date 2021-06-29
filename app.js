@@ -26,6 +26,7 @@ app.use('/viber/webhook', bot.middleware());
 
 app.listen(port, () => {
     bot.setWebhook(`${webhookUrl}/viber/webhook`).catch(error => {
+
         console.log('Can not set webhook on following server. Is it running?');
         console.error(error);
         process.exit(1);
